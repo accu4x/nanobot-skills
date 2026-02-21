@@ -3,35 +3,44 @@ import sys
 import time
 import csv
 import json
-import hashlib
 import traceback
+import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
-from urllib.parse import urljoin, urlparse
 
 import feedparser
 import requests
 from bs4 import BeautifulSoup
 
-# Config (repo/public copy should use placeholders; workspace copy may be populated)
+# Config (WORKSPACE: keep real feeds)
 FEEDS = [
-    ("Example Feed", "https://example.com/feed.xml"),
+    ("Hockey Writers", "https://thehockeywriters.com/feed/"),
+    ("GTS", "https://gogts.net/sports/hockey/feed/"),
+    ("Spectors Hockey", "https://www.spectorshockey.net/feed/"),
+    ("Gong Show", "https://www.hockeycardsgongshow.com/blog-feed.xml"),
+    ("The Hockey News", "https://thehockeynews.com/rss/THNHOME/full"),
+    ("The Win Column", "https://thewincolumn.ca/feed/"),
+    ("NHL Rumors", "https://nhlrumors.com/feed/"),
+    ("Upper Deck", "https://upperdeck.com/category/hockey/feed/"),
+    ("NHL Trade Talks", "https://nhltradetalk.com/feed/"),
+    ("90s Hockey Feed", "https://www.90shockeycardhistory.com/blog-feed.xml"),
+    ("Hockey Writers Collecting", "https://thehockeywriters.com/category/collecting-hockey/feed/")
 ]
 WEBSITES = [
-    "https://example.com/",
+    "https://www.thehockeynews.com",
+    "https://www.espn.com/nhl",
+    "https://www.tsn.ca/nhl",
+    "https://www.beckett.com/news/category/hockey-news-categories/"
 ]
 
-# Paths - prefer skill-local data; memory and workspace are optional external stores
-SKILL_DIR = os.path.dirname(__file__)
-DATA_DIR = os.path.join(SKILL_DIR, 'data')
-RAW_DIR = os.path.join(DATA_DIR, 'raw_items')
-os.makedirs(RAW_DIR, exist_ok=True)
-
-WORKSPACE = os.path.join(os.path.expanduser("~"), ".nanobot", "workspace")
+# Paths - use user-friendly home path
+WORKSPACE = os.path.expanduser(r"C:\Users\hn2_f\.nanobot\workspace")
 MEDIA_DIR = os.path.join(WORKSPACE, "media")
 MEMORY_DIR = os.path.join(WORKSPACE, "memory")
-os.makedirs(MEDIA_DIR, exist_ok=True)
-os.makedirs(MEMORY_DIR, exist_ok=True)
+if not os.path.exists(MEDIA_DIR):
+    os.makedirs(MEDIA_DIR, exist_ok=True)
+if not os.path.exists(MEMORY_DIR):
+    os.makedirs(MEMORY_DIR, exist_ok=True)
 
 TIMESTAMP_TZ = "America/New_York"
 
@@ -39,30 +48,29 @@ TIMESTAMP_TZ = "America/New_York"
 MAX_PER_FEED = 3
 MAX_TOTAL_ARTICLES = 60
 
-HEADERS = {"User-Agent": "nanobot-news-ingestor/1.0 (+https://example.com)"}
-
-# Shared requests session
-SESSION = requests.Session()
-SESSION.headers.update(HEADERS)
+HEADERS = {"User-Agent": "NanobotNews/1.0 (+https://example.com)"}
 
 
-def _safe_filename_from_url(url, suffix=".json"):
-    # Use a short hash plus basename to avoid leaking full URLs and keep filenames filesystem-safe
-    h = hashlib.md5((url or "").encode('utf8')).hexdigest()[:12]
-    parsed = urlparse(url or "")
-    name = (parsed.path.rstrip('/').split('/')[-1] or parsed.netloc or 'item')[:60]
-    safe = ''.join([c if c.isalnum() or c in ['-','_'] else '_' for c in name])
-    return f"{h}_{safe}{suffix}"
+def requests_get_with_retries(url, headers=None, timeout=5, max_retries=3, backoff=1.0):
+    headers = headers or HEADERS
+    for attempt in range(1, max_retries + 1):
+        try:
+            r = requests.get(url, headers=headers, timeout=timeout)
+            r.raise_for_status()
+            # small delay to be polite
+            time.sleep(0.5)
+            return r
+        except requests.exceptions.RequestException:
+            if attempt == max_retries:
+                return None
+            time.sleep(backoff * attempt)
+    return None
 
 
 def fetch_rss(feed_url, max_items=5):
     try:
         d = feedparser.parse(feed_url)
     except Exception:
-        return []
-    # feedparser may set .status or .bozo
-    status = getattr(d, 'status', 200)
-    if status and int(status) >= 400:
         return []
     items = []
     for e in d.entries[:max_items]:
@@ -73,27 +81,12 @@ def fetch_rss(feed_url, max_items=5):
     return items
 
 
-def fetch_article_text(url, max_chars=2000):
+def fetch_article_text(url, max_chars=4000):
     if not url:
         return ""
-    try:
-        r = SESSION.get(url, timeout=10)
-        r.raise_for_status()
-    except Exception:
+    r = requests_get_with_retries(url, headers=HEADERS, timeout=10, max_retries=3, backoff=1.0)
+    if not r:
         return ""
-    text = ""
-    # Try optional readability if available (prefer more accurate main-text extraction)
-    try:
-        from readability import Document
-        doc = Document(r.text)
-        summary_html = doc.summary()
-        soup = BeautifulSoup(summary_html, "html.parser")
-        text = "\n\n".join([p.get_text(strip=True) for p in soup.find_all('p')])
-        if text:
-            return text[:max_chars]
-    except Exception:
-        # readability not available or failed; continue with heuristics
-        pass
     try:
         soup = BeautifulSoup(r.text, "html.parser")
         # Try common article containers
@@ -108,7 +101,7 @@ def fetch_article_text(url, max_chars=2000):
             text = "\n\n".join([p.get_text(strip=True) for p in main.find_all("p")])
             if text:
                 return text[:max_chars]
-        # Fallback: choose largest group of paragraphs by total length
+        # Fallback: largest cluster of paragraphs
         ps = soup.find_all("p")
         if ps:
             texts = []
@@ -127,23 +120,40 @@ def fetch_article_text(url, max_chars=2000):
     return ""
 
 
+def summarize_text(text, max_sentences=3, max_chars=400):
+    if not text:
+        return ""
+    # simple sentence splitter
+    sents = re.split(r'(?<=[.!?])\s+', text.strip())
+    sel = []
+    total = 0
+    for s in sents:
+        s = s.replace('\n', ' ').strip()
+        if not s:
+            continue
+        sel.append(s)
+        total += len(s)
+        if len(sel) >= max_sentences or total >= max_chars:
+            break
+    return ' '.join(sel)[:max_chars]
+
+
 def scrape_homepage_for_links(site, max_links=10):
     links = []
+    r = requests_get_with_retries(site, headers=HEADERS, timeout=10, max_retries=3, backoff=1.0)
+    if not r:
+        return []
     try:
-        r = SESSION.get(site, timeout=10)
-        r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
         for a in soup.find_all("a", href=True):
-            href = a["href"].strip()
+            href = a["href"]
             text = a.get_text(strip=True)
             if not href:
                 continue
             # normalize
-            href = urljoin(site, href)
-            # crude filtering: same host or keywords
-            hostname = urlparse(site).netloc.lower()
-            if hostname in href or any(k in href.lower() for k in ("nhl", "hockey", "card", "news")):
-                links.append((text or href, href))
+            if href.startswith("/"):
+                href = site.rstrip("/") + href
+            links.append((text or href, href))
             if len(links) >= max_links:
                 break
     except Exception:
@@ -162,38 +172,55 @@ def scrape_homepage_for_links(site, max_links=10):
 def make_summary(articles):
     lines = []
     for i, a in enumerate(articles[:20], start=1):
-        title = a.get("title") or "(no title)"
-        src = a.get("source") or a.get("source_name") or ""
-        link = a.get("link") or ""
-        snippet = (a.get("snippet") or "").replace('\n', ' ')[:400]
+        title = a.get('title')
+        src = a.get('source') or a.get('source_name')
+        link = a.get('link')
+        snippet = a.get('summary') or a.get('snippet') or ""
         lines.append(f"{i}. {title} ({src})\n{snippet}\n{link}\n")
     return "\n".join(lines)
+
+
+def save_raw_and_summary(timestamp, articles, out_base_name):
+    RAW_DIR = os.path.join(os.path.dirname(__file__), 'data', 'raw_items')
+    os.makedirs(RAW_DIR, exist_ok=True)
+    saved_files = []
+    for a in articles:
+        fid = a.get('link') or a.get('title')
+        safe = ''.join([c if c.isalnum() or c in ['-','_'] else '_' for c in (fid or '')])[:120]
+        fname = f"rss_{safe}.json"
+        payload = {
+            'title': a.get('title'),
+            'link': a.get('link'),
+            'summary': a.get('summary'),
+            'source': a.get('source'),
+            'fetched_at': timestamp
+        }
+        try:
+            with open(os.path.join(RAW_DIR, fname), 'w', encoding='utf8') as rf:
+                json.dump(payload, rf, ensure_ascii=False, indent=2)
+            saved_files.append(os.path.join(RAW_DIR, fname))
+        except Exception:
+            pass
+    return saved_files
 
 
 def save_markdown(timestamp, summary_text, articles, out_base_name):
     filename = f"Latest_News_{out_base_name}.md"
     filepath = os.path.join(MEMORY_DIR, filename)
-    try:
-        with open(filepath, "w", encoding="utf8") as f:
-            f.write(f"# Latest News - {timestamp}\n\n")
-            f.write(summary_text)
-            f.write("\n\n---\n\n")
-            f.write("## Articles (raw)\n\n")
-            for a in articles:
-                f.write(f"- {a.get('title')} | {a.get('link')} | {a.get('source')}\n")
-    except Exception:
-        filepath = None
-    # CSV
+    with open(filepath, "w", encoding="utf8") as f:
+        f.write(f"# Latest News - {timestamp}\n\n")
+        f.write(summary_text)
+        f.write("\n\n---\n\n")
+        f.write("## Articles (raw)\n\n")
+        for a in articles:
+            f.write(f"- {a.get('title')} | {a.get('link')} | {a.get('source')}\n")
     csv_name = f"Latest_News_{out_base_name}.csv"
     csv_path = os.path.join(MEDIA_DIR, csv_name)
-    try:
-        with open(csv_path, "w", newline='', encoding="utf8") as csvfile:
-            writer = csv.writer(csvfile)
-            writer.writerow(["title", "link", "source", "snippet"])
-            for a in articles:
-                writer.writerow([a.get('title', ''), a.get('link', ''), a.get('source', ''), a.get('snippet', '')])
-    except Exception:
-        csv_path = None
+    with open(csv_path, "w", newline='', encoding="utf8") as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(["title", "link", "source", "summary"])
+        for a in articles:
+            writer.writerow([a.get('title', ''), a.get('link', ''), a.get('source', ''), a.get('summary', '')])
     return filepath, csv_path
 
 
@@ -212,13 +239,16 @@ def append_memory_index(timestamp, md_path, csv_path):
         pass
 
 
-def save_raw_and_summary(timestamp, summary_text, articles, out_base_name):
+def send_telegram_summary(token, chat_id, text):
+    if not token or not chat_id:
+        return False
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
     try:
-        md_path, csv_path = save_markdown(timestamp, summary_text, articles, out_base_name)
-        append_memory_index(timestamp, md_path, csv_path)
-        return md_path, csv_path, out_base_name
+        payload = {"chat_id": chat_id, "text": text, "disable_web_page_preview": True}
+        r = requests.post(url, data=payload, timeout=10)
+        return r.status_code == 200
     except Exception:
-        return None, None, out_base_name
+        return False
 
 
 def main():
@@ -240,8 +270,9 @@ def main():
                 if not link or link in seen_links:
                     continue
                 seen_links.add(link)
-                snippet = fetch_article_text(link, max_chars=400)
-                articles.append({"title": e.get('title'), "link": link, "source_name": name, "source": url, "snippet": snippet})
+                full = fetch_article_text(link, max_chars=2000)
+                summary = summarize_text(full, max_sentences=3, max_chars=400)
+                articles.append({"title": e.get('title'), "link": link, "source_name": name, "source": url, "summary": summary})
                 if len(articles) >= MAX_TOTAL_ARTICLES:
                     break
         except Exception:
@@ -259,8 +290,9 @@ def main():
                     if not link or link in seen_links:
                         continue
                     seen_links.add(link)
-                    snippet = fetch_article_text(link, max_chars=400)
-                    articles.append({"title": l.get('title') or link, "link": link, "source_name": site, "source": site, "snippet": snippet})
+                    full = fetch_article_text(link, max_chars=2000)
+                    summary = summarize_text(full, max_sentences=3, max_chars=400)
+                    articles.append({"title": l.get('title') or link, "link": link, "source_name": site, "source": site, "summary": summary})
                     if len(articles) >= MAX_TOTAL_ARTICLES:
                         break
             except Exception:
@@ -268,46 +300,26 @@ def main():
             if len(articles) >= MAX_TOTAL_ARTICLES:
                 break
 
-    # Prepare summary and save markdown + csv
+    # Save raw items and summaries
+    saved = save_raw_and_summary(timestamp, articles, now.strftime("%Y%m%d_%H%M"))
+
+    # Prepare summary document
     summary_text = make_summary(articles)
     out_base = now.strftime("%Y%m%d_%H%M")
-    md_path, csv_path, saved_base = save_raw_and_summary(timestamp, summary_text, articles, out_base)
+    md_path, csv_path = save_markdown(timestamp, summary_text, articles, out_base)
+    append_memory_index(timestamp, md_path, csv_path)
 
-    # Additionally save per-article raw JSON into data/raw_items using safe filenames
-    for a in articles:
-        try:
-            url = a.get('link') or a.get('title') or ''
-            fname = _safe_filename_from_url(url)
-            raw_obj = {
-                'id': fname,
-                'source': 'news_ingestor',
-                'source_name': a.get('source_name') or a.get('source'),
-                'url': a.get('link'),
-                'title': a.get('title'),
-                'body': a.get('snippet') or '',
-                'fetched_at': timestamp,
-                'metadata': {'origin_feed': a.get('source')}
-            }
-            with open(os.path.join(RAW_DIR, fname), 'w', encoding='utf8') as rf:
-                json.dump(raw_obj, rf, ensure_ascii=False, indent=2)
-        except Exception:
-            # best-effort: do not fail the whole run for one save error
-            continue
-
-    # Send a short Telegram message if configured
+    # Send a short Telegram message
     token = os.environ.get("NANOBOT_TELEGRAM_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN")
-    chat_id = os.environ.get("TELEGRAM_CHAT_ID") or os.environ.get("NANOBOT_TELEGRAM_CHAT_ID")
-    if token and chat_id and md_path:
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not chat_id:
+        chat_id = os.environ.get("NANOBOT_TELEGRAM_CHAT_ID")
+    if token and chat_id:
         short = f"Nanobot: Latest News ({timestamp})\nTop items:\n"
         for i, a in enumerate(articles[:5], start=1):
             short += f"{i}. {a.get('title')}\n"
         short += f"\nSaved: {os.path.basename(md_path)}"
-        try:
-            url = f"https://api.telegram.org/bot{token}/sendMessage"
-            payload = {"chat_id": chat_id, "text": short, "disable_web_page_preview": True}
-            SESSION.post(url, data=payload, timeout=10)
-        except Exception:
-            pass
+        send_telegram_summary(token, chat_id, short)
 
     print("Done. Saved:", md_path, csv_path)
 
@@ -315,6 +327,6 @@ def main():
 if __name__ == '__main__':
     try:
         main()
-    except Exception:
+    except Exception as exc:
         traceback.print_exc()
         sys.exit(1)
