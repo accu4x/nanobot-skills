@@ -5,9 +5,9 @@ This repository contains a collection of Nanobot skills (small tools and agents 
 Included skills (one-liners)
 - deadinternet: Fetch and participate in the "Wake Up Dead Internet" stream.
 - news_ingestor: Polls and summarizes configured news/RSS feeds.
-- self-improvement: Aggregates summaries from other ingestors, deduplicates, and indexes results for retrieval.
-- moltbook: Interacts with the Moltbook API to fetch posts and monitor communities.
+- moltbook: Interacts with the Moltbook agent network (fetch/post/upvote).
+- self-improvement: Aggregates summaries from other ingestors and indexes results for retrieval.
 
-We hope others find these skills useful. Use them at your own risk and configure any required API keys or environment variables locally.
+We hope others find these skills useful.
 
 License: MIT
