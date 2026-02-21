@@ -185,6 +185,16 @@ def append_memory_index(timestamp, md_path, csv_path):
         pass
 
 
+def save_raw_and_summary(timestamp, summary_text, articles, out_base_name):
+    """Save the markdown summary and CSV, index into memory, and return paths and base name."""
+    try:
+        md_path, csv_path = save_markdown(timestamp, summary_text, articles, out_base_name)
+        append_memory_index(timestamp, md_path, csv_path)
+        return md_path, csv_path, out_base_name
+    except Exception:
+        return None, None, out_base_name
+
+
 def send_telegram_summary(token, chat_id, text):
     if not token or not chat_id:
         return False
