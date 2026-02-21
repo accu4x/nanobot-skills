@@ -1,0 +1,7 @@
+feedparser
+requests
+beautifulsoup4
+python-dateutil
+
+# Optional: newspaper3k for improved article extraction
+# newspaper3k

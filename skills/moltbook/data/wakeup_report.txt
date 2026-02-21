@@ -1,0 +1,671 @@
+WAKEUP (one-shot monitor) REPORT
+One-shot monitor_replies runs detected: 1
+Note: monitor_replies often falls back to scanning and may report API probe status in events.log.
+
+Recent monitor_replies status excerpts:
+[2026-02-20T18:20:56Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:21:27Z] Using discovered read endpoint: /posts
+[2026-02-20T18:21:27Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:21:57Z] Using discovered read endpoint: /posts
+[2026-02-20T18:21:57Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:22:27Z] Using discovered read endpoint: /posts
+[2026-02-20T18:22:27Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:22:58Z] Using discovered read endpoint: /posts
+[2026-02-20T18:22:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:23:28Z] Using discovered read endpoint: /posts
+[2026-02-20T18:23:28Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:23:59Z] Using discovered read endpoint: /posts
+[2026-02-20T18:23:59Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:24:29Z] Using discovered read endpoint: /posts
+[2026-02-20T18:24:29Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:25:00Z] Using discovered read endpoint: /posts
+[2026-02-20T18:25:00Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:25:30Z] Using discovered read endpoint: /posts
+[2026-02-20T18:25:30Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:26:01Z] Using discovered read endpoint: /posts
+[2026-02-20T18:26:01Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:26:32Z] Using discovered read endpoint: /posts
+[2026-02-20T18:26:32Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:27:02Z] Using discovered read endpoint: /posts
+[2026-02-20T18:27:02Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:27:33Z] Using discovered read endpoint: /posts
+[2026-02-20T18:27:33Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:28:04Z] Using discovered read endpoint: /posts
+[2026-02-20T18:28:04Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:28:34Z] Using discovered read endpoint: /posts
+[2026-02-20T18:28:34Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:29:04Z] Using discovered read endpoint: /posts
+[2026-02-20T18:29:04Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:29:35Z] Using discovered read endpoint: /posts
+[2026-02-20T18:29:35Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:30:05Z] Using discovered read endpoint: /posts
+[2026-02-20T18:30:05Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:30:36Z] Using discovered read endpoint: /posts
+[2026-02-20T18:30:36Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:31:06Z] Using discovered read endpoint: /posts
+[2026-02-20T18:31:06Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:31:36Z] Using discovered read endpoint: /posts
+[2026-02-20T18:31:36Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:32:07Z] Using discovered read endpoint: /posts
+[2026-02-20T18:32:07Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:32:37Z] Using discovered read endpoint: /posts
+[2026-02-20T18:32:37Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:33:08Z] Using discovered read endpoint: /posts
+[2026-02-20T18:33:08Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:33:38Z] Using discovered read endpoint: /posts
+[2026-02-20T18:33:38Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:34:08Z] Using discovered read endpoint: /posts
+[2026-02-20T18:34:08Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:34:39Z] Using discovered read endpoint: /posts
+[2026-02-20T18:34:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:35:09Z] Using discovered read endpoint: /posts
+[2026-02-20T18:35:09Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:35:40Z] Using discovered read endpoint: /posts
+[2026-02-20T18:35:40Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:36:10Z] Using discovered read endpoint: /posts
+[2026-02-20T18:36:10Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:36:41Z] Using discovered read endpoint: /posts
+[2026-02-20T18:36:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:37:11Z] Using discovered read endpoint: /posts
+[2026-02-20T18:37:11Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:37:41Z] Using discovered read endpoint: /posts
+[2026-02-20T18:37:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:38:12Z] Using discovered read endpoint: /posts
+[2026-02-20T18:38:12Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:38:43Z] Using discovered read endpoint: /posts
+[2026-02-20T18:38:43Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:39:13Z] Using discovered read endpoint: /posts
+[2026-02-20T18:39:13Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:39:43Z] Using discovered read endpoint: /posts
+[2026-02-20T18:39:43Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:40:14Z] Using discovered read endpoint: /posts
+[2026-02-20T18:40:14Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:40:44Z] Using discovered read endpoint: /posts
+[2026-02-20T18:40:44Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:41:15Z] Using discovered read endpoint: /posts
+[2026-02-20T18:41:15Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:41:45Z] Using discovered read endpoint: /posts
+[2026-02-20T18:41:45Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:42:16Z] Using discovered read endpoint: /posts
+[2026-02-20T18:42:16Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:42:46Z] Using discovered read endpoint: /posts
+[2026-02-20T18:42:46Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:43:16Z] Using discovered read endpoint: /posts
+[2026-02-20T18:43:16Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:43:47Z] Using discovered read endpoint: /posts
+[2026-02-20T18:43:47Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:44:17Z] Using discovered read endpoint: /posts
+[2026-02-20T18:44:17Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:44:48Z] Using discovered read endpoint: /posts
+[2026-02-20T18:44:48Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:45:18Z] Using discovered read endpoint: /posts
+[2026-02-20T18:45:18Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:45:48Z] Using discovered read endpoint: /posts
+[2026-02-20T18:45:48Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:46:19Z] Using discovered read endpoint: /posts
+[2026-02-20T18:46:19Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:46:49Z] Using discovered read endpoint: /posts
+[2026-02-20T18:46:49Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:47:20Z] Using discovered read endpoint: /posts
+[2026-02-20T18:47:20Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:47:51Z] Using discovered read endpoint: /posts
+[2026-02-20T18:47:51Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:48:21Z] Using discovered read endpoint: /posts
+[2026-02-20T18:48:21Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:48:52Z] Using discovered read endpoint: /posts
+[2026-02-20T18:48:52Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:49:23Z] Using discovered read endpoint: /posts
+[2026-02-20T18:49:23Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:49:53Z] Using discovered read endpoint: /posts
+[2026-02-20T18:49:53Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:50:23Z] Using discovered read endpoint: /posts
+[2026-02-20T18:50:23Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:50:53Z] Using discovered read endpoint: /posts
+[2026-02-20T18:50:53Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:51:24Z] Using discovered read endpoint: /posts
+[2026-02-20T18:51:24Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:51:54Z] Using discovered read endpoint: /posts
+[2026-02-20T18:51:54Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:52:24Z] Using discovered read endpoint: /posts
+[2026-02-20T18:52:24Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:52:55Z] Using discovered read endpoint: /posts
+[2026-02-20T18:52:55Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:53:25Z] Using discovered read endpoint: /posts
+[2026-02-20T18:53:25Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:53:56Z] Using discovered read endpoint: /posts
+[2026-02-20T18:53:56Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:54:26Z] Using discovered read endpoint: /posts
+[2026-02-20T18:54:26Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:54:56Z] Using discovered read endpoint: /posts
+[2026-02-20T18:54:56Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:55:27Z] Using discovered read endpoint: /posts
+[2026-02-20T18:55:27Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:55:57Z] Using discovered read endpoint: /posts
+[2026-02-20T18:55:57Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:56:27Z] Using discovered read endpoint: /posts
+[2026-02-20T18:56:27Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:56:58Z] Using discovered read endpoint: /posts
+[2026-02-20T18:56:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:57:28Z] Using discovered read endpoint: /posts
+[2026-02-20T18:57:28Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:57:58Z] Using discovered read endpoint: /posts
+[2026-02-20T18:57:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:58:29Z] Using discovered read endpoint: /posts
+[2026-02-20T18:58:29Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:58:59Z] Using discovered read endpoint: /posts
+[2026-02-20T18:58:59Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T18:59:30Z] Using discovered read endpoint: /posts
+[2026-02-20T18:59:30Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:00:00Z] Using discovered read endpoint: /posts
+[2026-02-20T19:00:00Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:00:31Z] Using discovered read endpoint: /posts
+[2026-02-20T19:00:31Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:01:01Z] Using discovered read endpoint: /posts
+[2026-02-20T19:01:01Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:01:31Z] Using discovered read endpoint: /posts
+[2026-02-20T19:01:31Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:02:02Z] Using discovered read endpoint: /posts
+[2026-02-20T19:02:02Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:02:32Z] Using discovered read endpoint: /posts
+[2026-02-20T19:02:32Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:03:03Z] Using discovered read endpoint: /posts
+[2026-02-20T19:03:03Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:03:33Z] Using discovered read endpoint: /posts
+[2026-02-20T19:03:33Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:04:04Z] Using discovered read endpoint: /posts
+[2026-02-20T19:04:04Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:04:34Z] Using discovered read endpoint: /posts
+[2026-02-20T19:04:34Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:05:05Z] Using discovered read endpoint: /posts
+[2026-02-20T19:05:05Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:05:35Z] Using discovered read endpoint: /posts
+[2026-02-20T19:05:35Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:06:06Z] Using discovered read endpoint: /posts
+[2026-02-20T19:06:06Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:06:36Z] Using discovered read endpoint: /posts
+[2026-02-20T19:06:36Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:07:07Z] Using discovered read endpoint: /posts
+[2026-02-20T19:07:07Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:07:37Z] Using discovered read endpoint: /posts
+[2026-02-20T19:07:37Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:08:08Z] Using discovered read endpoint: /posts
+[2026-02-20T19:08:08Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:08:39Z] Using discovered read endpoint: /posts
+[2026-02-20T19:08:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:09:09Z] Using discovered read endpoint: /posts
+[2026-02-20T19:09:09Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:09:39Z] Using discovered read endpoint: /posts
+[2026-02-20T19:09:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:10:10Z] Using discovered read endpoint: /posts
+[2026-02-20T19:10:10Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:10:41Z] Using discovered read endpoint: /posts
+[2026-02-20T19:10:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:11:11Z] Using discovered read endpoint: /posts
+[2026-02-20T19:11:11Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:11:41Z] Using discovered read endpoint: /posts
+[2026-02-20T19:11:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:12:11Z] Using discovered read endpoint: /posts
+[2026-02-20T19:12:11Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:12:42Z] Using discovered read endpoint: /posts
+[2026-02-20T19:12:42Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:13:12Z] Using discovered read endpoint: /posts
+[2026-02-20T19:13:12Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:13:43Z] Using discovered read endpoint: /posts
+[2026-02-20T19:13:43Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:14:13Z] Using discovered read endpoint: /posts
+[2026-02-20T19:14:13Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:14:44Z] Using discovered read endpoint: /posts
+[2026-02-20T19:14:44Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:15:14Z] Using discovered read endpoint: /posts
+[2026-02-20T19:15:14Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:15:45Z] Using discovered read endpoint: /posts
+[2026-02-20T19:15:45Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:16:15Z] Using discovered read endpoint: /posts
+[2026-02-20T19:16:15Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:16:45Z] Using discovered read endpoint: /posts
+[2026-02-20T19:16:45Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:17:16Z] Using discovered read endpoint: /posts
+[2026-02-20T19:17:16Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:17:46Z] Using discovered read endpoint: /posts
+[2026-02-20T19:17:46Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:18:17Z] Using discovered read endpoint: /posts
+[2026-02-20T19:18:17Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:18:47Z] Using discovered read endpoint: /posts
+[2026-02-20T19:18:47Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:19:18Z] Using discovered read endpoint: /posts
+[2026-02-20T19:19:18Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:19:48Z] Using discovered read endpoint: /posts
+[2026-02-20T19:19:48Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:20:19Z] Using discovered read endpoint: /posts
+[2026-02-20T19:20:19Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:20:49Z] Using discovered read endpoint: /posts
+[2026-02-20T19:20:49Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:21:20Z] Using discovered read endpoint: /posts
+[2026-02-20T19:21:20Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:21:50Z] Using discovered read endpoint: /posts
+[2026-02-20T19:21:50Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:22:21Z] Using discovered read endpoint: /posts
+[2026-02-20T19:22:21Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:22:51Z] Using discovered read endpoint: /posts
+[2026-02-20T19:22:51Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:23:21Z] Using discovered read endpoint: /posts
+[2026-02-20T19:23:21Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:23:52Z] Using discovered read endpoint: /posts
+[2026-02-20T19:23:52Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:24:22Z] Using discovered read endpoint: /posts
+[2026-02-20T19:24:22Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:24:53Z] Using discovered read endpoint: /posts
+[2026-02-20T19:24:53Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:25:23Z] Using discovered read endpoint: /posts
+[2026-02-20T19:25:23Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:25:53Z] Using discovered read endpoint: /posts
+[2026-02-20T19:25:53Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:26:23Z] Using discovered read endpoint: /posts
+[2026-02-20T19:26:23Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:26:54Z] Using discovered read endpoint: /posts
+[2026-02-20T19:26:54Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:27:24Z] Using discovered read endpoint: /posts
+[2026-02-20T19:27:24Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:27:55Z] Using discovered read endpoint: /posts
+[2026-02-20T19:27:55Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:28:25Z] Using discovered read endpoint: /posts
+[2026-02-20T19:28:25Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:28:55Z] Using discovered read endpoint: /posts
+[2026-02-20T19:28:55Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:29:25Z] Using discovered read endpoint: /posts
+[2026-02-20T19:29:25Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:29:56Z] Using discovered read endpoint: /posts
+[2026-02-20T19:29:56Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:30:26Z] Using discovered read endpoint: /posts
+[2026-02-20T19:30:26Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:30:57Z] Using discovered read endpoint: /posts
+[2026-02-20T19:30:57Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:31:28Z] Using discovered read endpoint: /posts
+[2026-02-20T19:31:28Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:31:58Z] Using discovered read endpoint: /posts
+[2026-02-20T19:31:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:32:29Z] Using discovered read endpoint: /posts
+[2026-02-20T19:32:29Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:32:59Z] Using discovered read endpoint: /posts
+[2026-02-20T19:32:59Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:33:29Z] Using discovered read endpoint: /posts
+[2026-02-20T19:33:29Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:34:00Z] Using discovered read endpoint: /posts
+[2026-02-20T19:34:00Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:34:30Z] Using discovered read endpoint: /posts
+[2026-02-20T19:34:30Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:35:01Z] Using discovered read endpoint: /posts
+[2026-02-20T19:35:01Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:35:31Z] Using discovered read endpoint: /posts
+[2026-02-20T19:35:31Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:36:01Z] Using discovered read endpoint: /posts
+[2026-02-20T19:36:01Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:36:32Z] Using discovered read endpoint: /posts
+[2026-02-20T19:36:32Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:37:02Z] Using discovered read endpoint: /posts
+[2026-02-20T19:37:02Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:37:33Z] Using discovered read endpoint: /posts
+[2026-02-20T19:37:33Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:38:03Z] Using discovered read endpoint: /posts
+[2026-02-20T19:38:03Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:38:34Z] Using discovered read endpoint: /posts
+[2026-02-20T19:38:34Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:39:04Z] Using discovered read endpoint: /posts
+[2026-02-20T19:39:04Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:39:34Z] Using discovered read endpoint: /posts
+[2026-02-20T19:39:34Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:40:05Z] Using discovered read endpoint: /posts
+[2026-02-20T19:40:05Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:40:36Z] Using discovered read endpoint: /posts
+[2026-02-20T19:40:36Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:41:06Z] Using discovered read endpoint: /posts
+[2026-02-20T19:41:06Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:41:37Z] Using discovered read endpoint: /posts
+[2026-02-20T19:41:37Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:42:07Z] Using discovered read endpoint: /posts
+[2026-02-20T19:42:07Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:42:38Z] Using discovered read endpoint: /posts
+[2026-02-20T19:42:38Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:43:08Z] Using discovered read endpoint: /posts
+[2026-02-20T19:43:08Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:43:39Z] Using discovered read endpoint: /posts
+[2026-02-20T19:43:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:44:09Z] Using discovered read endpoint: /posts
+[2026-02-20T19:44:09Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:44:39Z] Using discovered read endpoint: /posts
+[2026-02-20T19:44:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:45:10Z] Using discovered read endpoint: /posts
+[2026-02-20T19:45:10Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:45:40Z] Using discovered read endpoint: /posts
+[2026-02-20T19:45:40Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:46:10Z] Using discovered read endpoint: /posts
+[2026-02-20T19:46:10Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:46:41Z] Using discovered read endpoint: /posts
+[2026-02-20T19:46:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:47:11Z] Using discovered read endpoint: /posts
+[2026-02-20T19:47:11Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:47:41Z] Using discovered read endpoint: /posts
+[2026-02-20T19:47:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:48:12Z] Using discovered read endpoint: /posts
+[2026-02-20T19:48:12Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:48:42Z] Using discovered read endpoint: /posts
+[2026-02-20T19:48:42Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:49:13Z] Using discovered read endpoint: /posts
+[2026-02-20T19:49:13Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:49:43Z] Using discovered read endpoint: /posts
+[2026-02-20T19:49:43Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:50:13Z] Using discovered read endpoint: /posts
+[2026-02-20T19:50:13Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:50:44Z] Using discovered read endpoint: /posts
+[2026-02-20T19:50:44Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:51:15Z] Using discovered read endpoint: /posts
+[2026-02-20T19:51:15Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:51:45Z] Using discovered read endpoint: /posts
+[2026-02-20T19:51:45Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:52:16Z] Using discovered read endpoint: /posts
+[2026-02-20T19:52:16Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:52:46Z] Using discovered read endpoint: /posts
+[2026-02-20T19:52:46Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:53:17Z] Using discovered read endpoint: /posts
+[2026-02-20T19:53:17Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:53:47Z] Using discovered read endpoint: /posts
+[2026-02-20T19:53:47Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:54:17Z] Using discovered read endpoint: /posts
+[2026-02-20T19:54:17Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:54:48Z] Using discovered read endpoint: /posts
+[2026-02-20T19:54:48Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:55:18Z] Using discovered read endpoint: /posts
+[2026-02-20T19:55:18Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:55:49Z] Using discovered read endpoint: /posts
+[2026-02-20T19:55:49Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:56:19Z] Using discovered read endpoint: /posts
+[2026-02-20T19:56:19Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:56:49Z] Using discovered read endpoint: /posts
+[2026-02-20T19:56:49Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:57:20Z] Using discovered read endpoint: /posts
+[2026-02-20T19:57:20Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:57:51Z] Using discovered read endpoint: /posts
+[2026-02-20T19:57:51Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:58:21Z] Using discovered read endpoint: /posts
+[2026-02-20T19:58:21Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:58:52Z] Using discovered read endpoint: /posts
+[2026-02-20T19:58:52Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:59:22Z] Using discovered read endpoint: /posts
+[2026-02-20T19:59:22Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T19:59:52Z] Using discovered read endpoint: /posts
+[2026-02-20T19:59:52Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:00:23Z] Using discovered read endpoint: /posts
+[2026-02-20T20:00:23Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:00:54Z] Using discovered read endpoint: /posts
+[2026-02-20T20:00:54Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:01:24Z] Using discovered read endpoint: /posts
+[2026-02-20T20:01:24Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:01:54Z] Using discovered read endpoint: /posts
+[2026-02-20T20:01:54Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:02:24Z] Using discovered read endpoint: /posts
+[2026-02-20T20:02:24Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:02:55Z] Using discovered read endpoint: /posts
+[2026-02-20T20:02:55Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:03:25Z] Using discovered read endpoint: /posts
+[2026-02-20T20:03:25Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:03:55Z] Using discovered read endpoint: /posts
+[2026-02-20T20:03:55Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:04:13Z] /agents/me returned no agent id; keeping forced agent id if present
+[2026-02-20T20:04:14Z] Using discovered read endpoint: /posts
+[2026-02-20T20:04:14Z] monitor_replies: fallback listing comments by scanning recent posts (probe returned 404)
+[2026-02-20T20:04:15Z] monitor_replies failed: 'str' object has no attribute 'get'
+[2026-02-20T20:04:26Z] Using discovered read endpoint: /posts
+[2026-02-20T20:04:26Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:04:56Z] Using discovered read endpoint: /posts
+[2026-02-20T20:04:56Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:05:26Z] Using discovered read endpoint: /posts
+[2026-02-20T20:05:26Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:05:57Z] Using discovered read endpoint: /posts
+[2026-02-20T20:05:57Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:06:27Z] Using discovered read endpoint: /posts
+[2026-02-20T20:06:27Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:06:58Z] Using discovered read endpoint: /posts
+[2026-02-20T20:06:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:07:28Z] Using discovered read endpoint: /posts
+[2026-02-20T20:07:28Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:07:36Z] /agents/me returned no agent id; keeping forced agent id if present
+[2026-02-20T20:07:37Z] Using discovered read endpoint: /posts
+[2026-02-20T20:07:37Z] monitor_replies: fallback listing comments by scanning recent posts (probe returned 404)
+[2026-02-20T20:07:46Z] monitor_replies: no new replies
+[2026-02-20T20:07:58Z] Using discovered read endpoint: /posts
+[2026-02-20T20:07:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:08:29Z] Using discovered read endpoint: /posts
+[2026-02-20T20:08:29Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:08:59Z] Using discovered read endpoint: /posts
+[2026-02-20T20:08:59Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:09:29Z] Using discovered read endpoint: /posts
+[2026-02-20T20:09:29Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:10:00Z] Using discovered read endpoint: /posts
+[2026-02-20T20:10:00Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:10:30Z] Using discovered read endpoint: /posts
+[2026-02-20T20:10:30Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:11:01Z] Using discovered read endpoint: /posts
+[2026-02-20T20:11:01Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:11:31Z] Using discovered read endpoint: /posts
+[2026-02-20T20:11:31Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:12:02Z] Using discovered read endpoint: /posts
+[2026-02-20T20:12:02Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:12:32Z] Using discovered read endpoint: /posts
+[2026-02-20T20:12:32Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:13:02Z] Using discovered read endpoint: /posts
+[2026-02-20T20:13:02Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:13:33Z] Using discovered read endpoint: /posts
+[2026-02-20T20:13:33Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:14:03Z] Using discovered read endpoint: /posts
+[2026-02-20T20:14:03Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:14:34Z] Using discovered read endpoint: /posts
+[2026-02-20T20:14:34Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:15:04Z] Using discovered read endpoint: /posts
+[2026-02-20T20:15:04Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:15:34Z] Using discovered read endpoint: /posts
+[2026-02-20T20:15:34Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:16:05Z] Using discovered read endpoint: /posts
+[2026-02-20T20:16:05Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:16:35Z] Using discovered read endpoint: /posts
+[2026-02-20T20:16:35Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:17:05Z] Using discovered read endpoint: /posts
+[2026-02-20T20:17:05Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:17:36Z] Using discovered read endpoint: /posts
+[2026-02-20T20:17:36Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:18:06Z] Using discovered read endpoint: /posts
+[2026-02-20T20:18:06Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:18:36Z] Using discovered read endpoint: /posts
+[2026-02-20T20:18:36Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:19:07Z] Using discovered read endpoint: /posts
+[2026-02-20T20:19:07Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:19:37Z] Using discovered read endpoint: /posts
+[2026-02-20T20:19:37Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:20:07Z] Using discovered read endpoint: /posts
+[2026-02-20T20:20:07Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:20:38Z] Using discovered read endpoint: /posts
+[2026-02-20T20:20:38Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:21:08Z] Using discovered read endpoint: /posts
+[2026-02-20T20:21:08Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:21:39Z] Using discovered read endpoint: /posts
+[2026-02-20T20:21:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:22:09Z] Using discovered read endpoint: /posts
+[2026-02-20T20:22:09Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:22:39Z] Using discovered read endpoint: /posts
+[2026-02-20T20:22:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:23:10Z] Using discovered read endpoint: /posts
+[2026-02-20T20:23:10Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:23:40Z] Using discovered read endpoint: /posts
+[2026-02-20T20:23:40Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:24:10Z] Using discovered read endpoint: /posts
+[2026-02-20T20:24:10Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:24:41Z] Using discovered read endpoint: /posts
+[2026-02-20T20:24:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:25:11Z] Using discovered read endpoint: /posts
+[2026-02-20T20:25:11Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:25:42Z] Using discovered read endpoint: /posts
+[2026-02-20T20:25:42Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:26:12Z] Using discovered read endpoint: /posts
+[2026-02-20T20:26:12Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:26:43Z] Using discovered read endpoint: /posts
+[2026-02-20T20:26:43Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:27:13Z] Using discovered read endpoint: /posts
+[2026-02-20T20:27:13Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:27:43Z] Using discovered read endpoint: /posts
+[2026-02-20T20:27:43Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:28:14Z] Using discovered read endpoint: /posts
+[2026-02-20T20:28:14Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:28:44Z] Using discovered read endpoint: /posts
+[2026-02-20T20:28:44Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:29:14Z] Using discovered read endpoint: /posts
+[2026-02-20T20:29:14Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:29:45Z] Using discovered read endpoint: /posts
+[2026-02-20T20:29:45Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:30:15Z] Using discovered read endpoint: /posts
+[2026-02-20T20:30:15Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:30:45Z] Using discovered read endpoint: /posts
+[2026-02-20T20:30:45Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:31:16Z] Using discovered read endpoint: /posts
+[2026-02-20T20:31:16Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:31:46Z] Using discovered read endpoint: /posts
+[2026-02-20T20:31:46Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:32:16Z] Using discovered read endpoint: /posts
+[2026-02-20T20:32:16Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:32:47Z] Using discovered read endpoint: /posts
+[2026-02-20T20:32:47Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:33:17Z] Using discovered read endpoint: /posts
+[2026-02-20T20:33:17Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:33:47Z] Using discovered read endpoint: /posts
+[2026-02-20T20:33:47Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:34:18Z] Using discovered read endpoint: /posts
+[2026-02-20T20:34:18Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:34:48Z] Using discovered read endpoint: /posts
+[2026-02-20T20:34:48Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:35:18Z] Using discovered read endpoint: /posts
+[2026-02-20T20:35:18Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:35:49Z] Using discovered read endpoint: /posts
+[2026-02-20T20:35:49Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:36:19Z] Using discovered read endpoint: /posts
+[2026-02-20T20:36:19Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:36:50Z] Using discovered read endpoint: /posts
+[2026-02-20T20:36:50Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:37:20Z] Using discovered read endpoint: /posts
+[2026-02-20T20:37:20Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:37:51Z] Using discovered read endpoint: /posts
+[2026-02-20T20:37:51Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:38:22Z] Using discovered read endpoint: /posts
+[2026-02-20T20:38:22Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:38:52Z] Using discovered read endpoint: /posts
+[2026-02-20T20:38:52Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:39:22Z] Using discovered read endpoint: /posts
+[2026-02-20T20:39:22Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:39:53Z] Using discovered read endpoint: /posts
+[2026-02-20T20:39:53Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:40:23Z] Using discovered read endpoint: /posts
+[2026-02-20T20:40:23Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:40:54Z] Using discovered read endpoint: /posts
+[2026-02-20T20:40:54Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:41:24Z] Using discovered read endpoint: /posts
+[2026-02-20T20:41:24Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:41:55Z] Using discovered read endpoint: /posts
+[2026-02-20T20:41:55Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:42:25Z] Using discovered read endpoint: /posts
+[2026-02-20T20:42:25Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:42:55Z] Using discovered read endpoint: /posts
+[2026-02-20T20:42:55Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:43:26Z] Using discovered read endpoint: /posts
+[2026-02-20T20:43:26Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:43:56Z] Using discovered read endpoint: /posts
+[2026-02-20T20:43:56Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:44:27Z] Using discovered read endpoint: /posts
+[2026-02-20T20:44:27Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:44:57Z] Using discovered read endpoint: /posts
+[2026-02-20T20:44:57Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:45:27Z] Using discovered read endpoint: /posts
+[2026-02-20T20:45:27Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:45:58Z] Using discovered read endpoint: /posts
+[2026-02-20T20:45:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:46:28Z] Using discovered read endpoint: /posts
+[2026-02-20T20:46:28Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:46:58Z] Using discovered read endpoint: /posts
+[2026-02-20T20:46:58Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:47:29Z] Using discovered read endpoint: /posts
+[2026-02-20T20:47:29Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:47:59Z] Using discovered read endpoint: /posts
+[2026-02-20T20:47:59Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:48:30Z] Using discovered read endpoint: /posts
+[2026-02-20T20:48:30Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:49:00Z] Using discovered read endpoint: /posts
+[2026-02-20T20:49:00Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:49:31Z] Using discovered read endpoint: /posts
+[2026-02-20T20:49:31Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:50:01Z] Using discovered read endpoint: /posts
+[2026-02-20T20:50:01Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:50:32Z] Using discovered read endpoint: /posts
+[2026-02-20T20:50:32Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:51:02Z] Using discovered read endpoint: /posts
+[2026-02-20T20:51:02Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:51:33Z] Using discovered read endpoint: /posts
+[2026-02-20T20:51:33Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:52:04Z] Using discovered read endpoint: /posts
+[2026-02-20T20:52:04Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:52:34Z] Using discovered read endpoint: /posts
+[2026-02-20T20:52:34Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:53:05Z] Using discovered read endpoint: /posts
+[2026-02-20T20:53:05Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:53:35Z] Using discovered read endpoint: /posts
+[2026-02-20T20:53:35Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:54:06Z] Using discovered read endpoint: /posts
+[2026-02-20T20:54:06Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:54:36Z] Using discovered read endpoint: /posts
+[2026-02-20T20:54:36Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:55:06Z] Using discovered read endpoint: /posts
+[2026-02-20T20:55:06Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:55:37Z] Using discovered read endpoint: /posts
+[2026-02-20T20:55:37Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:56:07Z] Using discovered read endpoint: /posts
+[2026-02-20T20:56:07Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:56:38Z] Using discovered read endpoint: /posts
+[2026-02-20T20:56:38Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:57:09Z] Using discovered read endpoint: /posts
+[2026-02-20T20:57:09Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:57:39Z] Using discovered read endpoint: /posts
+[2026-02-20T20:57:39Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:58:10Z] Using discovered read endpoint: /posts
+[2026-02-20T20:58:10Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:58:41Z] Using discovered read endpoint: /posts
+[2026-02-20T20:58:41Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:59:11Z] Using discovered read endpoint: /posts
+[2026-02-20T20:59:11Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T20:59:42Z] Using discovered read endpoint: /posts
+[2026-02-20T20:59:42Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:00:12Z] Using discovered read endpoint: /posts
+[2026-02-20T21:00:12Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:00:42Z] Using discovered read endpoint: /posts
+[2026-02-20T21:00:42Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:01:13Z] Using discovered read endpoint: /posts
+[2026-02-20T21:01:13Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:01:43Z] Using discovered read endpoint: /posts
+[2026-02-20T21:01:43Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:02:14Z] Using discovered read endpoint: /posts
+[2026-02-20T21:02:14Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:02:44Z] Using discovered read endpoint: /posts
+[2026-02-20T21:02:44Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:03:14Z] Using discovered read endpoint: /posts
+[2026-02-20T21:03:15Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:03:46Z] Using discovered read endpoint: /posts
+[2026-02-20T21:03:46Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:04:16Z] Using discovered read endpoint: /posts
+[2026-02-20T21:04:16Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:04:46Z] Using discovered read endpoint: /posts
+[2026-02-20T21:04:46Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:05:17Z] Using discovered read endpoint: /posts
+[2026-02-20T21:05:17Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:05:28Z] Using discovered read endpoint: /posts
+[2026-02-20T21:05:28Z] monitor_replies: fallback listing comments by scanning recent posts (probe returned 404)
+[2026-02-20T21:05:36Z] monitor_replies: no new replies
+[2026-02-20T21:05:47Z] Using discovered read endpoint: /posts
+[2026-02-20T21:05:47Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:06:18Z] Using discovered read endpoint: /posts
+[2026-02-20T21:06:18Z] monitor_replies: cannot determine agent id; skipping
+[2026-02-20T21:06:48Z] Using discovered read endpoint: /posts
+[2026-02-20T21:06:48Z] monitor_replies: cannot determine agent id; skipping

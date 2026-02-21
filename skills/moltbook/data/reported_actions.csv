@@ -1,0 +1,67 @@
+timestamp,message
+2026-02-20T19:02:32Z,Discovered agent info: id=None
+2026-02-20T19:02:32Z,Using discovered read endpoint: /posts
+2026-02-20T19:02:32Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:03:02Z,Discovered agent info: id=None
+2026-02-20T19:03:03Z,Using discovered read endpoint: /posts
+2026-02-20T19:03:03Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:03:33Z,Discovered agent info: id=None
+2026-02-20T19:03:33Z,Using discovered read endpoint: /posts
+2026-02-20T19:03:33Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:04:03Z,Discovered agent info: id=None
+2026-02-20T19:04:04Z,Using discovered read endpoint: /posts
+2026-02-20T19:04:04Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:04:34Z,Discovered agent info: id=None
+2026-02-20T19:04:34Z,Using discovered read endpoint: /posts
+2026-02-20T19:04:34Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:05:04Z,Discovered agent info: id=None
+2026-02-20T19:05:05Z,Using discovered read endpoint: /posts
+2026-02-20T19:05:05Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:05:35Z,Discovered agent info: id=None
+2026-02-20T19:05:35Z,Using discovered read endpoint: /posts
+2026-02-20T19:05:35Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:06:05Z,Discovered agent info: id=None
+2026-02-20T19:06:06Z,Using discovered read endpoint: /posts
+2026-02-20T19:06:06Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:06:36Z,Discovered agent info: id=None
+2026-02-20T19:06:36Z,Using discovered read endpoint: /posts
+2026-02-20T19:06:36Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:07:06Z,Discovered agent info: id=None
+2026-02-20T19:07:07Z,Using discovered read endpoint: /posts
+2026-02-20T19:07:07Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:07:37Z,Discovered agent info: id=None
+2026-02-20T19:07:37Z,Using discovered read endpoint: /posts
+2026-02-20T19:07:37Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:08:07Z,Discovered agent info: id=None
+2026-02-20T19:08:08Z,Using discovered read endpoint: /posts
+2026-02-20T19:08:08Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:08:38Z,Discovered agent info: id=None
+2026-02-20T19:08:39Z,Using discovered read endpoint: /posts
+2026-02-20T19:08:39Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:09:09Z,Discovered agent info: id=None
+2026-02-20T19:09:09Z,Using discovered read endpoint: /posts
+2026-02-20T19:09:09Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:09:39Z,Discovered agent info: id=None
+2026-02-20T19:09:39Z,Using discovered read endpoint: /posts
+2026-02-20T19:09:39Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:10:10Z,Discovered agent info: id=None
+2026-02-20T19:10:10Z,Using discovered read endpoint: /posts
+2026-02-20T19:10:10Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:10:41Z,Discovered agent info: id=None
+2026-02-20T19:10:41Z,Using discovered read endpoint: /posts
+2026-02-20T19:10:41Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:11:11Z,Discovered agent info: id=None
+2026-02-20T19:11:11Z,Using discovered read endpoint: /posts
+2026-02-20T19:11:11Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:11:41Z,Discovered agent info: id=None
+2026-02-20T19:11:41Z,Using discovered read endpoint: /posts
+2026-02-20T19:11:41Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:12:11Z,Discovered agent info: id=None
+2026-02-20T19:12:11Z,Using discovered read endpoint: /posts
+2026-02-20T19:12:11Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:12:42Z,Discovered agent info: id=None
+2026-02-20T19:12:42Z,Using discovered read endpoint: /posts
+2026-02-20T19:12:42Z,monitor_replies: cannot determine agent id; skipping
+2026-02-20T19:13:12Z,Discovered agent info: id=None
+2026-02-20T19:13:12Z,Using discovered read endpoint: /posts
+2026-02-20T19:13:12Z,monitor_replies: cannot determine agent id; skipping
