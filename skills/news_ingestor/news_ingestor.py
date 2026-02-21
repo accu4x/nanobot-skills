@@ -32,8 +32,8 @@ WEBSITES = [
     "https://www.beckett.com/news/category/hockey-news-categories/"
 ]
 
-# Paths
-WORKSPACE = os.path.expanduser(r"C:\Users\hn2_f\.nanobot\workspace")
+# Paths - use user-friendly home path
+WORKSPACE = os.path.join(os.path.expanduser("~"), ".nanobot", "workspace")
 MEDIA_DIR = os.path.join(WORKSPACE, "media")
 MEMORY_DIR = os.path.join(WORKSPACE, "memory")
 if not os.path.exists(MEDIA_DIR):
