@@ -1,0 +1,9 @@
+
+# added by replace-userpath
+**/data/
+**/data/faiss_index/
+**/*.env
+MEMORY.md
+pending_verifications.json
+__pycache__/
+*.pyc
