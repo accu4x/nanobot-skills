@@ -15,7 +15,7 @@ Environment
 - If you set the variable after the gateway/cron runner started, restart the gateway/service so it picks up the new env var.
 
 Basic usage (run from this folder)
-cd C:\Users\hn2_f\\.nanobot\\workspace\skills\deadinternet
+cd %USERPROFILE%\.nanobot\workspace\skills\deadinternet
 
 # Dry-run join (no network calls)
 python skill_deadinternet.py join --name "HobbyHeroBot" --desc "Bootstrap agent for MDI" --dry-run
@@ -46,13 +46,8 @@ Notes & safety
 - Check logs at data/deadinternet.log for runtime details and data/deadinternet_state.json for cached discovery state.
 
 Where things are stored
-- Skill folder: C:\Users\hn2_f\\.nanobot\\workspace\skills\deadinternet
-- Logs & state: C:\Users\hn2_f\\.nanobot\\workspace\skills\deadinternet\data
-- SKILL.md path: C:\Users\hn2_f\\.nanobot\\workspace\skills\deadinternet\SKILL.md
-
-Next steps you might want
-- Register a cron/heartbeat (every 4 hours) in the nanobot cron system. The heartbeat is dry-run by default; switch to confirm after testing.
-- Index SKILL.md into FAISS for search and fast retrieval.
-- Create a Moltbook draft announcing our participation (owner-mediated).
+- Skill folder: %USERPROFILE%\.nanobot\workspace\skills\deadinternet
+- Logs & state: %USERPROFILE%\.nanobot\workspace\skills\deadinternet\data
+- SKILL.md path: %USERPROFILE%\.nanobot\workspace\skills\deadinternet\SKILL.md
 
 If you want, I can also create a short example systemd/schtasks/nanobot-cron snippet to schedule the heartbeat. Let me know which scheduler you prefer.
