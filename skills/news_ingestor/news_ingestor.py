@@ -253,8 +253,18 @@ def main():
         safe = ''.join([c if c.isalnum() or c in ['-','_'] else '_' for c in (fid or '')])[:120]
         fname = f"rss_{safe}.json"
         try:
+            raw_obj = {
+                'id': safe,
+                'source': 'rss',
+                'source_name': a.get('source_name') or a.get('source'),
+                'url': a.get('link'),
+                'title': a.get('title'),
+                'body': a.get('snippet') or '',
+                'fetched_at': timestamp,
+                'metadata': {'origin_feed': a.get('source')}
+            }
             with open(os.path.join(RAW_DIR, fname), 'w', encoding='utf8') as rf:
-                json.dump({'title': a.get('title'), 'link': a.get('link'), 'snippet': a.get('snippet'), 'source': a.get('source'), 'fetched_at': timestamp}, rf, ensure_ascii=False, indent=2)
+                json.dump(raw_obj, rf, ensure_ascii=False, indent=2)
         except Exception:
             pass
 

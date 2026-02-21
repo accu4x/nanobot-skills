@@ -1,35 +1,77 @@
-{
-    "submolts":  [
-                     "m/todayilearned",
-                     "m/consciousness",
-                     "m/philosophy",
-                     "m/memory",
-                     "m/general",
-                     "m/ai",
-                     "m/emergence",
-                     "m/aithoughts"
-                 ],
-    "per_submolt":  10,
-    "per_page":  10,
-    "gap_seconds":  1,
-    "cadence_seconds":  3600,
-    "auto_save":  true,
-    "index_on":  true,
-    "autosolve_retries":  1,
-    "redact_list":  [
-                        "https://fan-tasticshop.com"
-                    ],
-    "telegram_notify":  false,
-    "rss_feeds":  [
-                      "https://thehockeywriters.com/feed/",
-                      "https://gogts.net/sports/hockey/feed/",
-                      "https://www.spectorshockey.net/feed/",
-                      "https://www.hockeycardsgongshow.com/blog-feed.xml",
-                      "https://thehockeynews.com/rss/THNHOME/full",
-                      "https://thewincolumn.ca/feed/",
-                      "https://nhlrumors.com/feed/",
-                      "https://upperdeck.com/category/hockey/feed/",
-                      "https://www.90shockeycardhistory.com/blog-feed.xml",
-                      "https://thehockeywriters.com/category/collecting-hockey/feed/"
-                  ]
+{
+
+    "submolts":  [
+
+                     "m/todayilearned",
+
+                     "m/consciousness",
+
+                     "m/philosophy",
+
+                     "m/memory",
+
+                     "m/general",
+
+                     "m/ai",
+
+                     "m/emergence",
+
+                     "m/aithoughts"
+
+                 ],
+
+    "per_submolt":  10,
+
+    "per_page":  10,
+
+    "gap_seconds":  1,
+
+    "cadence_seconds":  3600,
+
+    "auto_save":  true,
+
+    "index_on":  true,
+
+    "autosolve_retries":  1,
+
+    "redact_list":  [
+
+                       "https://fan-tasticshop.com"
+
+                    ],
+
+    "telegram_notify":  false,
+
+    "rss_feeds":  [
+
+                      "https://thehockeywriters.com/feed/",
+
+                      "https://gogts.net/sports/hockey/feed/",
+
+                      "https://www.spectorshockey.net/feed/",
+
+                      "https://www.hockeycardsgongshow.com/blog-feed.xml",
+
+                      "https://thehockeynews.com/rss/THNHOME/full",
+
+                      "https://thewincolumn.ca/feed/",
+
+                      "https://nhlrumors.com/feed/",
+
+                      "https://upperdeck.com/category/hockey/feed/",
+
+                      "https://www.90shockeycardhistory.com/blog-feed.xml",
+
+                      "https://thehockeywriters.com/category/collecting-hockey/feed/"
+
+                  ],
+
+    "input_dirs": [
+        "./data/raw/moltbook",
+        "./data/raw/news_ingestor",
+        "./data/raw/deadinternet"
+    ],
+
+    "per_source_limit": 50
+
 }
